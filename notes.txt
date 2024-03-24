@@ -1,0 +1,30 @@
+Overview
+- opening questions
+- summary
+- contents
+
+Computational Complexity
+- robot logic puzzle
+- how the problem scales -> increasing comp complexity
+- began studying which problems are solvable using an algorithm and which are impossible to crack
+- led to finding not all problems are the same -> sorting problems into classes of easy vs hard
+- therefore P vs NP was born
+
+Defining P and NP
+- p defintion and examples
+- np definition and examples
+- np completeness?
+
+Does P = NP?
+- mathmeticians have made algorithms to solve np problems in a reasonable time 
+- np --> p
+- are all np problems really p problems?
+
+The consequences
+- positive consequences if P = NP
+- negative consequences
+
+Where do we currently stand on the problem?
+- most csers believe p does not equal np
+- hard to prove due to natural proof barriers
+- if civilisation lasts long enough p vs np may be solved by us or by AI

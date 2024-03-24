@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>P vs NP</title>
+    <link rel="stylesheet" href="./style.css">
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="index.html" class="logo">P vs NP</a>
+      <nav>
+        <ul class="navlinks">
+          <li><a href="#">Home</a></li>
+          <li><a href="/references.html" target="_blank">References</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/P_versus_NP_problem" target="_blank">Wiki</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="hero-section">
+        <h1>What is<br><span class="coloured-text">P vs NP?</span></h1>
+        <p>by Joseph Meadowcroft</p>
+      </div>
+      <div class="content-section">
+        <div class="summary-section">
+          <h2>Overview</h2>
+          <div class="opening-questions">
+            <p>
+              Is it possible to invent a computer that solves any problem in a flash?
+            </p>
+            <p>
+              Do problems exist that would stump the most powerful of computers?
+            </p>
+            <p>
+              How could coming up with a really fast method of solving sudoku fast track finding a cure to cancer?
+            </p>
+          </div>
+          <p>
+            The P vs NP problem is the most famous unsolved problem in computer science, first brought to light in 1971 by Stephen Cook in his article about "The complexity of theorem proving procedures".<br><br>
+            The problem, in it's simplest terms:
+          </p>
+          <div class="questionbox">
+            <p>
+              If a solution to a problem can be checked fast, can the problem also be solved quickly?
+            </p>
+          </div>
+          <h3 class="contentsheader">In this article, we will look at:</h3>
+          <div class="contents">          
+            <ul class="contentslist">
+              <li>Computational complexity</li>
+              <li>Defining P and NP</li>
+              <li>Does P = NP?</li>
+              <li>The consequences of a solution</li>
+              <li>Where do we currently stand on the problem?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="comp-complexity-container">
+          <div class="comp-complexity-section">            
+            <h2>Computational Complexity</h2>
+            <div class="logicpuzzle">
+              <p>
+                A robot arrives in a foreign land, where everyone always tells the truth, or always lies. The robot reaches a fork in the road with two paths, one leading the land of the truth tellers, and one leading to the land of liars.<br><br>
+                A sentinel appears in front of the robot, allowing him to ask one question to find which path leads to the safe land of the truth tellers, however it is unclear which land this sentinel comes from.<br><br>
+                What question should the robot ask to find the right path?
+              </p>
+              <div class="trigger">
+                  <div class="answercontent">"Which path is the way to your home?"</div>
+                  <div class="box">Hover to reveal answer</div>
+              </div>
+            </div>
+            <div class="comp-complexity-explanation">
+              <p>
+                Now imagine this same problem, but with many more paths and turns, with each path having more sentinals, and more questions to ask them.
+              </p>
+              <p>
+                This depicts <span class="underline">computational complexity.</span><br>
+                <div class="comp-complexity-definition">"The study of the resources such as time and space needed to solve a problem, and how those resources scale as problems get bigger."</div>
+              </p>
+              <p>
+                Computational complexity theorists study which problems are solvable by an algorithm, and which are almost impossible to crack. This leads to a natural classification as we find that not all problems are the same.
+              </p>
+            </div>
+            <img src="easyhardboxes3.jpg">
+            <p class="last-p">
+              As a result, computer scientists have found a more specific and technical way to sort these problems into categories, birthing <span class="underline">the P vs NP problem.</span>
+            </p>
+          </div>
+        </div>
+        <div class="defining-p-vs-np-container">
+          <div class="defining-p-vs-np-section">
+            <h2>Defining P and NP</h2>
+            <div class="p-definition">
+              <p>
+                P (Polynomial) problems are a class of problems that algorithms can solve quickly, within polynomial time. Polynomial time algorithms are programs where running time grows as a polynomial function of the size of its input.
+              </p>
+              <br><p> \( f(n) = n^k \)</p><br>
+              <p>
+                e.g. finding the largest number in a list, addition, subtraction, finding factors of a number, the majority of things we use our computers for on a daily basis
+              </p>
+            </div>
+            <div class="np-definition">
+              <p>
+                NP (Nondeterministic Polynomial) problems includes problems whose solutions can be verified quickly, also within polynomial time, but cannot necessarily be solved quickly. Complexity increases exponentially as inputs increase.
+              </p>
+              <br><p> \( f(n) = 2^n \)</p><br>
+              <p>
+                e.g. Boolean satisfiability problem (SAT), sudoku, a jigsaw puzzle, Knapsack problem, and many other complicated problems
+              </p>
+            </div>
+            <div class="graphimg">
+              <img src="graph.jpeg">
+            </div>
+            <div class="subsets-definitions">
+              <p>
+                In the early 1970s, complexity researchers realised that dozens of the NP problems they were struggling with all essentially the same problem at their core, resulting in a subset of NP problems known as <span class="underline">NP-Complete</span> being created, a subset including all the really hard parts of NP problems. Since then, many more problems have been added to the list of NP-Complete problems, such as sudoku, protein folding, and even classic video games such as Tetris or Super Mario Bros.
+                <br><br>
+                A fast problem used to solve an NP-Complete problem could be used to solve any problem within NP. Hence why sudoku is pretty hard, as it contains the same NP-Complete paths that makes protein folding hard, so if you come up with a profoundly faster way to solve sudoku, make sure you let somebody know as it could help us to cure cancer.
+            </div>
+          </div>
+        </div>
+        <div class="does-p-np-container">
+          <div class="does-p-np-section">
+            <h2>Does P = NP?</h2>
+            <p>
+              Over the years, mathmaticians have found clever algorithms to solve NP problems in a reasonable amount of time, moving them into the class of P problems (from hard to easy), and making them solvable by a computer, thus resulting in the questions...
+            </p>
+            <p class="questiontext">
+              Are all NP problems really P problems?
+            </p>
+            <p class="questiontext1">
+              Could every problem that is seemingly impossible for a computer to solve turn out to be easy to solve in the future? (P = NP)
+            </p>
+            
+          </div>
+        </div>
+        <div class="consequences-container">
+          <div class="consequences-section">
+            <h2>The consequences of a solution</h2>
+            <p>If we were to find a solution to all NP problems, meaning P does in fact equal NP:</p>
+            <div class="con-lists">              
+              <ul class="positives">
+                <li>Solutions to nearly any problem would be within our reach</li>
+                <li>Businesses could solve complex logistics problems overnight, boosting the economy</li>
+                <li>Scientists could make unthinkable breakthroughs</li>
+              </ul>
+            </div>
+            <div class="con-lists">             
+              <ul class="negatives">
+                <li>Encryption methods for banking and privacy become obsolete</li>
+                <li>Online privacy and the internet as a whole would change forever</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="wheredowestand-container">
+          <div class="wheredowestand-section">
+            <h2>Where do we currently stand on the problem?</h2>
+            <p class="last-p">
+              Around 81% of computer scientists believe that P does not equal NP, however this is difficult to prove due to something called natural proof barriers.
+              <br><br>
+              There is always ongoing research regarding a solution to this problem, to eventually prove if all NP problems are in fact P problems or not. If civilisation lasts long enough, I believe P vs NP will eventually be solved...
+              <br><br>
+              ...but by us? Or will the computer beat us to it?
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
